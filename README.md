@@ -4,17 +4,17 @@ Esta es una API RESTful construida con **Node.js** y **Express**, diseñada para
 
 🌍 **Live Demo:** [https://api-nerds-jasminbf.vercel.app/]
 
-## 🦾 Arquitectura y Tecnologías
-* **Entorno:** Node.js
-* **Framework Web:** Express.js
-* **Middleware:** CORS (para acceso cruzado) y Express JSON Parser.
-* **Seguridad y Trazabilidad:** Implementación de logs de observabilidad y Global Error Handler.
+## 🦾 ¿Cómo está construida?
+* **Base:** Node.js y Express.js.
+* **Conectividad:** Configurada para permitir conexiones externas y procesamiento de datos en formato JSON.
+* **Estabilidad:** Incluye una Manejo Global de Errores que evita que la aplicación se detenga ante entradas inesperadas.
+* **Monitoreo:** Sistema de mensajes en consola para rastrear cada petición y facilitar el mantenimiento.
 
 ## ⚙️ Instalación y Ejecución Local
 
 1. Clona este repositorio en tu máquina local:
    ```bash
-   git clone [URL_DE_TU_REPOSITORIO]
+   git clone https://github.com/aoirei00/api-nerds-jasminbf
    ```
 2. Instala las dependencias del proyecto:
    ```bash
