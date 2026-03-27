@@ -1,6 +1,7 @@
+@api_url = https://api-nerds-jasminbf.vercel.app
 
 ### PRUEBA 1: Endpoint 1 - Happy Path (Básico)
-POST http://localhost:3000/text/process
+POST {{api_url}}/text/process
 Content-Type: application/json
 
 {
@@ -8,8 +9,7 @@ Content-Type: application/json
 }
 
 ### PRUEBA 2: Endpoint 1 - Anidación Profunda (Inception)
-# Esperado: Múltiples pasos invirtiendo de adentro hacia afuera
-POST http://localhost:3000/text/process
+POST {{api_url}}/text/process
 Content-Type: application/json
 
 {
@@ -17,8 +17,7 @@ Content-Type: application/json
 }
 
 ### PRUEBA 3: Endpoint 1 - Grupos Independientes
-# Esperado: Resuelve ambos grupos por separado
-POST http://localhost:3000/text/process
+POST {{api_url}}/text/process
 Content-Type: application/json
 
 {
@@ -26,56 +25,53 @@ Content-Type: application/json
 }
 
 ### PRUEBA 4: Endpoint 2 - Happy Path
-POST http://localhost:3000/text/transform
+POST {{api_url}}/text/transform
 Content-Type: application/json
 
 {
-  "text": "Hello world! This is a test. Hello again."
+  "text": "Hello, hello world! This is a test. Hello again."
 }
 
 ### PRUEBA 5: Endpoint 2 - Números y Caracteres Especiales
-# Esperado: Las letras alternan mayúsculas, los números y símbolos se ignoran
-POST http://localhost:3000/text/transform
+POST {{api_url}}/text/transform
 Content-Type: application/json
 
 {
   "text": "H3ll0 W0rld! @2026_Test"
 }
 
-### 🛡️ PRUEBA 6: Excepción - Paréntesis sin cerrar
-# Esperado: Código 400 indicando sintaxis incorrecta
-POST http://localhost:3000/text/process
+### PRUEBA 6: Excepción - Paréntesis sin cerrar
+POST {{api_url}}/text/process
 Content-Type: application/json
 
 {
   "text": "(Hola sin cerrar"
 }
 
-### 🛡️ PRUEBA 7: Excepción - Falta el campo 'text' (Error 400)
-POST http://localhost:3000/text/process
+### PRUEBA 7: Excepción - Falta el campo 'text'
+POST {{api_url}}/text/process
 Content-Type: application/json
 
 {}
 
-### 🛡️ PRUEBA 8: Excepción - Tipo de dato incorrecto (Error 400)
-POST http://localhost:3000/text/transform
+### PRUEBA 8: Excepción - Tipo de dato incorrecto
+POST {{api_url}}/text/transform
 Content-Type: application/json
 
 {
   "text": ["Esto", "es", "un", "arreglo"]
 }
 
-### 🛡️ PRUEBA 9: Excepción - Ruta Inexistente (Error 404)
-POST http://localhost:3000/text/procesar
+### PRUEBA 9: Excepción - Ruta Inexistente (Error 404)
+POST {{api_url}}/text/procesar
 Content-Type: application/json
 
 {
   "text": "Prueba de ruta mala"
 }
 
-### 🛡️ PRUEBA 10: Excepción - JSON Malformado (Error 400)
-# Nota: Falta una comilla al final de la palabra "Hola"
-POST http://localhost:3000/text/process
+### PRUEBA 10: Excepción - JSON Malformado
+POST {{api_url}}/text/process
 Content-Type: application/json
 
 {

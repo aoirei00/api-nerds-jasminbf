@@ -2,7 +2,7 @@
 
 Esta es una API RESTful construida con **Node.js** y **Express**, diseñada para procesar y manipular cadenas de texto. Implementa validaciones estrictas, manejo global de excepciones y respuestas estructuradas en JSON.
 
-🌍 **Live Demo:** [URL_DE_VERCEL_AQUI]
+🌍 **Live Demo:** [https://api-nerds-jasminbf.vercel.app/]
 
 ## 🦾 Arquitectura y Tecnologías
 * **Entorno:** Node.js
