@@ -118,6 +118,14 @@ app.post('/text/transform', (req, res, next) => {
     }
 });
 
+app.get('/', (req, res) => {
+    res.status(200).json({
+        mensaje: "🚀 API de Procesamiento de Texto en línea",
+        estado: "Funcionando correctamente",
+        documentacion: "Consulta el repositorio para ver los endpoints disponibles (POST /text/process y POST /text/transform)"
+    });
+});
+
 app.use((req, res) => {
     console.warn(`⚠️ [Error 404] Intento de acceso a ruta inexistente: ${req.url}`);
     res.status(404).json({ 
